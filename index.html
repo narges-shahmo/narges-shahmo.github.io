@@ -13,12 +13,34 @@
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <style>
             .profile-picture {
-                width: 450px; /* Adjust based on your preference */
-                height: 450px; /* Ensure the width and height are equal for a circle */
-                border-radius: 50%; /* This creates the circular shape */
-                object-fit: cover; /* Ensures the image covers the area without losing aspect ratio */
-                display: block; /* Block display to allow margin settings */
-                margin: 0 auto 20px; /* Centers the image and adds space below */
+                width: 50vw; /* Adjust based on viewport width */
+                height: 50vw; /* Keep the aspect ratio equal to maintain the circle */
+                border-radius: 50%;
+                object-fit: cover;
+                display: block;
+                margin: 0 auto 20px;
+                max-width: 450px; /* Set a max-width to prevent the image from being too large on big screens */
+                max-height: 450px; /* Same for max-height */
+            }
+
+            /* Media query for tablets */
+            @media (max-width: 768px) {
+                .profile-picture {
+                    width: 40vw; /* Slightly smaller on tablets */
+                    height: 40vw;
+                    max-width: 300px; /* Adjust max sizes for smaller devices */
+                    max-height: 300px;
+                }
+            }
+
+            /* Media query for mobile devices */
+            @media (max-width: 480px) {
+                .profile-picture {
+                    width: 70vw; /* Increase size to take up more screen width on small devices */
+                    height: 70vw;
+                    max-width: 200px; /* More adjustments for small screens */
+                    max-height: 200px;
+                }
             }
         </style>
     </head>
